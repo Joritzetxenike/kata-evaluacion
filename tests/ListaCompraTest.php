@@ -30,5 +30,15 @@ class ListaCompraTest extends TestCase
         $this->assertEquals('pan x1', $result);
     }
 
+    /**
+     * @test
+     *
+     */
+    public function addOneItemMultipleTimesReturnsListWithItem():void
+    {
+        $listaCompra = new ListaCompra();
+        $result = $listaCompra->add('pan 2');
+        $this->assertEquals('pan x2', $result);
+    }
 
 }
