@@ -87,7 +87,4 @@ class ListaCompraTest extends TestCase
         $result = $listaCompra->add('pan');
         $this->assertEquals('pan x2', $result);
     }
-
-
-
 }
