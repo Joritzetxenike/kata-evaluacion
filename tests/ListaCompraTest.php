@@ -12,7 +12,7 @@ class ListaCompraTest extends TestCase
      * @test
      *
      */
-    public function addNothingReturnsVoidLIst()
+    public function addNothingReturnsVoidLIst():void
     {
         $listaCompra = new ListaCompra();
         $result = $listaCompra->add('');
@@ -23,7 +23,7 @@ class ListaCompraTest extends TestCase
      * @test
      *
      */
-    public function addOneItemReturnsListWithOneItem()
+    public function addOneItemReturnsListWithOneItem():void
     {
         $listaCompra = new ListaCompra();
         $result = $listaCompra->add('pan');
