@@ -41,4 +41,15 @@ class ListaCompraTest extends TestCase
         $this->assertEquals('pan x2', $result);
     }
 
+    /**
+     * @test
+     *
+     */
+    public function clearListaCompra():void
+    {
+        $listaCompra = new ListaCompra();
+        $result = $listaCompra->clear();
+        $this->assertEquals('', $result);
+    }
+
 }

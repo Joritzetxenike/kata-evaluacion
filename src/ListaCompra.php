@@ -47,4 +47,10 @@ class ListaCompra
             )
         );
     }
+
+    public function clear():string
+    {
+        $this->listaCompra = [];
+        return $this->imprimirLista();
+    }
 }
