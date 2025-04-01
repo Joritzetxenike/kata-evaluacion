@@ -64,4 +64,30 @@ class ListaCompraTest extends TestCase
         $this->assertEquals('leche x1, pan x2', $result);
     }
 
+    /**
+     * @test
+     *
+     */
+    public function givenItemIfInListEliminatesThatItemFromList():void
+    {
+        $listaCompra = new ListaCompra();
+        $result = $listaCompra->add('pan');
+        $result = $listaCompra->eliminateItem('pan');
+        $this->assertEquals('', $result);
+    }
+
+    /**
+     * @test
+     *
+     */
+    public function givenOneItemMultipleTimesReturnsItemWithCuantity()
+    {
+        $listaCompra = new ListaCompra();
+        $result = $listaCompra->add('pan');
+        $result = $listaCompra->add('pan');
+        $this->assertEquals('pan x2', $result);
+    }
+
+
+
 }

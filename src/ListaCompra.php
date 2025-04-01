@@ -55,4 +55,11 @@ class ListaCompra
         $this->listaCompra = [];
         return $this->imprimirLista();
     }
+
+    public function eliminateItem(string $string)
+    {
+        if(array_key_exists($string[0], $this->listaCompra)){
+        }
+        return $this->imprimirLista();
+    }
 }
