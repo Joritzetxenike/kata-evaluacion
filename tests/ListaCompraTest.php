@@ -19,4 +19,16 @@ class ListaCompraTest extends TestCase
         $this->assertEquals('', $result);
     }
 
+    /**
+     * @test
+     *
+     */
+    public function addOneItemReturnsListWithOneItem()
+    {
+        $listaCompra = new ListaCompra();
+        $result = $listaCompra->add('pan');
+        $this->assertEquals('pan x1', $result);
+    }
+
+
 }
