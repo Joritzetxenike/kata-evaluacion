@@ -52,4 +52,16 @@ class ListaCompraTest extends TestCase
         $this->assertEquals('', $result);
     }
 
+    /**
+     * @test
+     *
+     */
+    public function addDifferentItemsReturnsListWithTheseItemsOrdererByAlphabet():void
+    {
+        $listaCompra = new ListaCompra();
+        $result = $listaCompra->add('pan 2');
+        $result = $listaCompra->add('leche');
+        $this->assertEquals('leche x1, pan x2', $result);
+    }
+
 }

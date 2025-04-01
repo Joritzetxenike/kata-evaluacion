@@ -28,10 +28,12 @@ class ListaCompra
 
         }
         return $this->imprimirLista();
+
     }
 
     private function imprimirLista():string
     {
+        ksort($this->listaCompra);
         return $this->mapped_implode(', ', $this->listaCompra, ' x');
 
     }
